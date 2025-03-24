@@ -65,57 +65,57 @@ export default App;
 
 Para rodar o projeto em tempo real e testar as modificações na biblioteca:
 
-1. Na pasta raiz da biblioteca, execute:
-
-   ```sh
-   yarn link
-   ```
-
-   ou
-
-   ```sh
-   npm link
-   ```
-
-2. Na pasta example, execute:
-
-   ```sh
-   yarn link "preview-phone"
-   ```
-
-   ou
-
-   ```sh
-   npm link "preview-phone"
-   ```
-
-3. Execute o seguinte comando para instalar as dependências:
-
-```sh
- yarn install
-```
-
-ou
-
-```sh
-npm install
-
-```
-
-4. Na raiz da biblioteca, rode o seguinte comando para compilar as modificações em tempo real:
-
-```sh
-yarn run dev
-```
-
-ou
+1.  Na pasta raiz da biblioteca, execute:
 
     ```sh
+    yarn link
+    ```
 
-npm run dev
+    ou
 
-```
+    ```sh
+    npm link
+    ```
 
+2.  Na pasta example, execute:
+
+    ```sh
+    yarn link "preview-phone"
+    ```
+
+    ou
+
+    ```sh
+    npm link "preview-phone"
+    ```
+
+3.  Execute o seguinte comando para instalar as dependências:
+
+    ```sh
+    yarn install
+    ```
+
+    ou
+
+    ```sh
+    npm install
+    ```
+
+4.  Na raiz da biblioteca, rode o seguinte comando para compilar as modificações em tempo real:
+
+    ```sh
+    yarn run dev
+    ```
+
+    ou
+
+        ```sh
+
+    npm run dev
+
+    ```
+
+    ```
 
 Agora, qualquer modificação feita na biblioteca será refletida automaticamente no projeto de exemplo.
 
@@ -126,4 +126,7 @@ Este projeto está licenciado sob a MIT License.
 ## --------
 
 Desenvolvido por [Hugo Emannuel](https://github.com/hugoemannuel). Sinta-se à vontade para contribuir ou relatar problemas!
+
+```
+
 ```
