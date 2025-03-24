@@ -119,6 +119,4 @@ Agora, qualquer modificação feita na biblioteca será refletida automaticament
 
 Este projeto está licenciado sob a MIT License.
 
-## ---------------------------------------------------
-
 Desenvolvido por [Hugo Emannuel](https://github.com/hugoemannuel). Sinta-se à vontade para contribuir ou relatar problemas!
