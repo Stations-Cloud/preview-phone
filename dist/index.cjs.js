@@ -863,6 +863,12 @@ const PageTitle = styled.h1 `
   margin-top: 10px;
   width: 95%;
 `;
+const ColumContainer = styled.div `
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+`;
 const CodeContainer = styled.div `
   display: flex;
   border: 1px dashed #8f0cf2;
@@ -920,12 +926,7 @@ const DiscountRules = styled.p `
 `;
 
 const InternalNotificationScreen = ({ barText, buttonLink, buttonText, code, discountRules, logo, notificationDescription, pageTitle, }) => {
-    return (jsxRuntimeExports.jsxs(Container, { children: [jsxRuntimeExports.jsx(TopBar, { children: jsxRuntimeExports.jsx(BarText, { children: barText ? barText : "Notificação" }) }), jsxRuntimeExports.jsxs(ContentContainer, { children: [logo ? jsxRuntimeExports.jsx(Logo, { src: logo, alt: "logo" }) : jsxRuntimeExports.jsx("div", {}), jsxRuntimeExports.jsx(LineFinal, {}), jsxRuntimeExports.jsx(PageTitle, { children: pageTitle }), jsxRuntimeExports.jsx(NotificationDescription, { children: notificationDescription }), buttonLink ? (jsxRuntimeExports.jsx("a", { style: { textDecoration: "none" }, href: buttonLink, target: "_blank", rel: "noopener noreferrer", children: jsxRuntimeExports.jsx(ButtonLink, { children: buttonText }) })) : (jsxRuntimeExports.jsx("div", {})), jsxRuntimeExports.jsx(LineFinal, {}), code ? (jsxRuntimeExports.jsxs("div", { style: {
-                            display: "flex",
-                            width: "100%",
-                            flexDirection: "column",
-                            alignItems: "center",
-                        }, children: [jsxRuntimeExports.jsx(PageTitle, { children: "C\u00F3digo" }), jsxRuntimeExports.jsx(CodeContainer, { children: jsxRuntimeExports.jsx(CodeText, { children: code }) })] })) : (jsxRuntimeExports.jsx("div", {})), discountRules ? (jsxRuntimeExports.jsx(DiscountRules, { children: discountRules })) : (jsxRuntimeExports.jsx("div", {}))] })] }));
+    return (jsxRuntimeExports.jsxs(Container, { children: [jsxRuntimeExports.jsx(TopBar, { children: jsxRuntimeExports.jsx(BarText, { children: barText ? barText : "Notificação" }) }), jsxRuntimeExports.jsxs(ContentContainer, { children: [logo ? jsxRuntimeExports.jsx(Logo, { src: logo, alt: "logo" }) : jsxRuntimeExports.jsx("div", {}), jsxRuntimeExports.jsx(LineFinal, {}), jsxRuntimeExports.jsx(PageTitle, { children: pageTitle }), jsxRuntimeExports.jsx(NotificationDescription, { children: notificationDescription }), buttonLink ? (jsxRuntimeExports.jsx("a", { style: { textDecoration: "none" }, href: buttonLink, target: "_blank", rel: "noopener noreferrer", children: jsxRuntimeExports.jsx(ButtonLink, { children: buttonText }) })) : (jsxRuntimeExports.jsx("div", {})), code && jsxRuntimeExports.jsx(LineFinal, {}), code ? (jsxRuntimeExports.jsxs(ColumContainer, { children: [jsxRuntimeExports.jsx(PageTitle, { children: "C\u00F3digo" }), jsxRuntimeExports.jsx(CodeContainer, { children: jsxRuntimeExports.jsx(CodeText, { children: code }) })] })) : (jsxRuntimeExports.jsx("div", {})), discountRules ? (jsxRuntimeExports.jsx(DiscountRules, { children: discountRules })) : (jsxRuntimeExports.jsx("div", {}))] })] }));
 };
 
 exports.ExternalNotificationScreen = ExternalNotificationScreen;
