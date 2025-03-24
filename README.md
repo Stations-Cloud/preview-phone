@@ -23,7 +23,7 @@ Importe e utilize os componentes conforme necessário:
 
 ```tsx
 import React from "react";
-import ExternalNotificationScreen from "preview-phone";
+import { ExternalNotificationScreen } from "preview-phone";
 
 const App = () => {
   return (
@@ -41,7 +41,7 @@ export default App;
 
 ```tsx
 import React from "react";
-import InternalNotificationScreen from "preview-phone";
+import { InternalNotificationScreen } from "preview-phone";
 
 const App = () => {
   return (
