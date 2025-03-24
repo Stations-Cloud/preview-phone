@@ -1,0 +1,39 @@
+@font-face {
+    font-family: "Nexa Black";
+    src: url("https://node.clubecerto.com.br/superapp/images/assets/fonts/nexaBlack.otf")
+  }
+  @font-face {
+    font-family: "Nexa Bold";
+    src: url("https://node.clubecerto.com.br/superapp/images/assets/fonts/NexaBold.otf");
+  }
+  @font-face {
+    font-family: "Nexa Book";
+    src: url("https://node.clubecerto.com.br/superapp/images/assets/fonts/NexaBook.otf");
+  }
+  @font-face {
+    font-family: "Nexa ExtraBold";
+    src: url("https://node.clubecerto.com.br/superapp/images/assets/fonts/nexabold.otf");
+  }
+  @font-face {
+    font-family: "Nexa ExtraLight";
+    src: url("https://node.clubecerto.com.br/superapp/images/assets/fonts/nexalight.otf");
+  }
+  
+  @font-face {
+    font-family: "Nexa Regular";
+    src: url("https://node.clubecerto.com.br/superapp/images/assets/fonts/NexaRegular.otf");
+  }
+  .font-regular {
+    font-family: "Nexa Regular";
+  }
+  
+  @font-face {
+    font-family: "Nexa Light";
+    src: url("https://node.clubecerto.com.br/superapp/images/assets/fonts/NexaLight.otf");
+  }
+  
+  @font-face {
+    font-family: "Nexa Heavy";
+    src: url("https://node.clubecerto.com.br/superapp/images/assets/fonts/NexaHeavy.otf");
+  }
+  
