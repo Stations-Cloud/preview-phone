@@ -69,6 +69,13 @@ export const PageTitle = styled.h1`
   width: 95%;
 `;
 
+export const ColumContainer = styled.div`
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+`;
+
 export const CodeContainer = styled.div`
   display: flex;
   border: 1px dashed #8f0cf2;

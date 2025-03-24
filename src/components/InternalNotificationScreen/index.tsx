@@ -3,6 +3,7 @@ import {
   ButtonLink,
   CodeContainer,
   CodeText,
+  ColumContainer,
   Container,
   ContentContainer,
   DiscountRules,
@@ -58,21 +59,14 @@ const InternalNotificationScreen: React.FC<InternalNotificationScreenProps> = ({
         ) : (
           <div />
         )}
-        <LineFinal />
+        {code && <LineFinal />}
         {code ? (
-          <div
-            style={{
-              display: "flex",
-              width: "100%",
-              flexDirection: "column",
-              alignItems: "center",
-            }}
-          >
+          <ColumContainer>
             <PageTitle>Código</PageTitle>
             <CodeContainer>
               <CodeText>{code}</CodeText>
             </CodeContainer>
-          </div>
+          </ColumContainer>
         ) : (
           <div />
         )}
