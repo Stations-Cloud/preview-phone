@@ -109,12 +109,8 @@ Para rodar o projeto em tempo real e testar as modificações na biblioteca:
 
     ou
 
-        ```sh
-
+    ```sh
     npm run dev
-
-    ```
-
     ```
 
 Agora, qualquer modificação feita na biblioteca será refletida automaticamente no projeto de exemplo.
@@ -123,10 +119,6 @@ Agora, qualquer modificação feita na biblioteca será refletida automaticament
 
 Este projeto está licenciado sob a MIT License.
 
-## --------
+## ---------------------------------------------------
 
 Desenvolvido por [Hugo Emannuel](https://github.com/hugoemannuel). Sinta-se à vontade para contribuir ou relatar problemas!
-
-```
-
-```
