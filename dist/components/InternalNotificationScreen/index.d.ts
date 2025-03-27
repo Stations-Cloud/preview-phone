@@ -1,12 +1,12 @@
 interface InternalNotificationScreenProps {
     barText?: string;
-    logo?: string;
+    banner?: string;
+    bannerType?: "vertical" | "horizontal" | "small";
     pageTitle?: string;
     notificationDescription?: string;
     code?: string;
     discountRules?: string;
     buttonText?: string;
-    buttonLink?: string;
 }
 declare const InternalNotificationScreen: React.FC<InternalNotificationScreenProps>;
 export default InternalNotificationScreen;

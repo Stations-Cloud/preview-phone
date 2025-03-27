@@ -1,0 +1,11 @@
+export declare const Container: import("styled-components").StyledComponent<"div", any, {}, never>;
+export declare const ContainerInternal: import("styled-components").StyledComponent<"div", any, {}, never>;
+export declare const TopBar: import("styled-components").StyledComponent<"div", any, {}, never>;
+export declare const ArrowLeft: import("styled-components").StyledComponent<(props: import("react").SVGProps<SVGSVGElement>) => import("react/jsx-runtime").JSX.Element, any, {}, never>;
+export declare const BarText: import("styled-components").StyledComponent<"div", any, {}, never>;
+export declare const ContentContainer: import("styled-components").StyledComponent<"div", any, {}, never>;
+export declare const Card: import("styled-components").StyledComponent<"div", any, {}, never>;
+export declare const ContentCard: import("styled-components").StyledComponent<"div", any, {}, never>;
+export declare const ContentCardText: import("styled-components").StyledComponent<"div", any, {}, never>;
+export declare const TextCard: import("styled-components").StyledComponent<"p", any, {}, never>;
+export declare const LogoCard: import("styled-components").StyledComponent<"img", any, {}, never>;

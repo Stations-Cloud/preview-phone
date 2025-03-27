@@ -31,7 +31,7 @@ function styleInject(css, ref) {
 var css_248z = "@font-face {\r\n    font-family: \"Nexa Black\";\r\n    src: url(\"https://node.clubecerto.com.br/superapp/images/assets/fonts/nexaBlack.otf\")\r\n  }\r\n  @font-face {\r\n    font-family: \"Nexa Bold\";\r\n    src: url(\"https://node.clubecerto.com.br/superapp/images/assets/fonts/NexaBold.otf\");\r\n  }\r\n  @font-face {\r\n    font-family: \"Nexa Book\";\r\n    src: url(\"https://node.clubecerto.com.br/superapp/images/assets/fonts/NexaBook.otf\");\r\n  }\r\n  @font-face {\r\n    font-family: \"Nexa ExtraBold\";\r\n    src: url(\"https://node.clubecerto.com.br/superapp/images/assets/fonts/nexabold.otf\");\r\n  }\r\n  @font-face {\r\n    font-family: \"Nexa ExtraLight\";\r\n    src: url(\"https://node.clubecerto.com.br/superapp/images/assets/fonts/nexalight.otf\");\r\n  }\r\n  \r\n  @font-face {\r\n    font-family: \"Nexa Regular\";\r\n    src: url(\"https://node.clubecerto.com.br/superapp/images/assets/fonts/NexaRegular.otf\");\r\n  }\r\n  .font-regular {\r\n    font-family: \"Nexa Regular\";\r\n  }\r\n  \r\n  @font-face {\r\n    font-family: \"Nexa Light\";\r\n    src: url(\"https://node.clubecerto.com.br/superapp/images/assets/fonts/NexaLight.otf\");\r\n  }\r\n  \r\n  @font-face {\r\n    font-family: \"Nexa Heavy\";\r\n    src: url(\"https://node.clubecerto.com.br/superapp/images/assets/fonts/NexaHeavy.otf\");\r\n  }\r\n  ";
 styleInject(css_248z);
 
-const Container$1 = styled.div `
+const Container$2 = styled.div `
   position: relative;
   display: flex;
   flex-direction: column;
@@ -69,10 +69,10 @@ const DescriptionNotification = styled.p `
 `;
 
 const ExternalNotificationScreen = ({ title, description, }) => {
-    return (jsx(Container$1, { children: jsxs(MainContainer, { children: [jsx(TitleContainer, { children: jsx(TitleNotification, { children: title }) }), jsx(DescriptionContainer, { children: jsx(DescriptionNotification, { children: description }) })] }) }));
+    return (jsx(Container$2, { children: jsxs(MainContainer, { children: [jsx(TitleContainer, { children: jsx(TitleNotification, { children: title }) }), jsx(DescriptionContainer, { children: jsx(DescriptionNotification, { children: description }) })] }) }));
 };
 
-const Container = styled.div `
+const Container$1 = styled.div `
   position: relative;
   flex-direction: column;
   width: 250px;
@@ -85,52 +85,79 @@ const Container = styled.div `
   background-repeat: no-repeat;
   background-size: contain;
 `;
-const TopBar = styled.div `
+const ContainerInternal$1 = styled.div `
+  background-color: #8f0cf2;
+  width: 220px;
+  height: 480px;
+  flex-direction: column;
   display: flex;
-  width: 90%;
-  height: 50px;
-  margin-bottom: 30px;
+  align-items: center;
   justify-content: center;
+  border-top-left-radius: 14px;
+  border-top-right-radius: 14px;
+`;
+const TopBar$1 = styled.div `
+  display: flex;
+  width: 100%;
+  height: 50px;
+  margin-top: 10px;
+  justify-content: space-between;
   background-color: #8f0cf2;
   color: #fff;
   font-size: 18px;
   font-weight: bold;
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
-  border-bottom-right-radius: 5px;
-  border-bottom-left-radius: 5px;
 `;
-styled.img `
+const ArrowLeft$1 = styled.img `
   width: 16px;
   height: 12px;
   margin-left: 10px;
   margin-top: 18px;
 `;
-const BarText = styled.div `
+const BarText$1 = styled.div `
   font-size: 15px;
   font-family: "Nexa Bold";
   margin-left: 10px;
   margin-top: 18px;
+  width: 50%;
 `;
-const ContentContainer = styled.div `
+const ContentContainer$1 = styled.div `
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 80%;
-  height: 80%;
+  width: 100%;
+  margin-top: 2px;
+  background-color: white;
+  height: 90%;
   border-top-left-radius: 14px;
   border-top-right-radius: 14px;
+  border-bottom-left-radius: 3px;
+  border-bottom-right-radius: 3px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  overflow-y: auto;
 `;
 const Logo = styled.img `
   align-self: center;
-  height: 70px;
-  width: 70px;
+  border-radius: 14px;
+
+  width: ${({ bannerType }) => bannerType === "horizontal"
+    ? "90%"
+    : bannerType === "vertical"
+        ? "120px"
+        : "100px"};
+
+  height: ${({ bannerType }) => bannerType === "vertical"
+    ? "170px"
+    : bannerType === "horizontal"
+        ? "100px"
+        : "100px"};
 `;
 const PageTitle = styled.h1 `
   font-size: 14px;
   font-family: "Nexa Regular";
-  justify-content: center;
+  justify-content: flex-start;
   display: flex;
   font-weight: 400;
   margin-top: 10px;
@@ -144,25 +171,25 @@ const ColumContainer = styled.div `
 `;
 const CodeContainer = styled.div `
   display: flex;
-  border: 1px dashed #8f0cf2;
+  border: 1px solid gray;
   height: 30px;
   width: 80%;
   border-radius: 30px;
   justify-content: center;
-  align-items: center;
 `;
 const CodeText = styled.p `
   font-size: 14px;
   font-weight: 600;
+  align-self: center;
   font-family: "Nexa Regular";
   letter-spacing: 1px;
 `;
 const NotificationDescription = styled.p `
   font-size: 10px;
   font-family: "Nexa Regular";
-  justify-content: center;
+  justify-content: flex-start;
   display: flex;
-  text-align: center;
+  text-align: start;
   color: #666;
   margin-top: 5px;
   width: 95%;
@@ -181,7 +208,7 @@ const ButtonLink = styled.button `
   height: 30px;
   width: 170px;
 `;
-const LineFinal = styled.div `
+styled.div `
   height: 1px;
   background-color: #8f0cf2;
   margin-top: 20px;
@@ -189,8 +216,8 @@ const LineFinal = styled.div `
 `;
 const DiscountRules = styled.p `
   display: flex;
-  justify-content: center;
-  text-align: center;
+  justify-content: flex-start;
+  text-align: start;
   font-size: 9px;
   color: #777;
   margin-top: 20px;
@@ -198,9 +225,121 @@ const DiscountRules = styled.p `
   width: 95%;
 `;
 
-const InternalNotificationScreen = ({ barText, buttonLink, buttonText, code, discountRules, logo, notificationDescription, pageTitle, }) => {
-    return (jsxs(Container, { children: [jsx(TopBar, { children: jsx(BarText, { children: barText ? barText : "Notificação" }) }), jsxs(ContentContainer, { children: [logo ? jsx(Logo, { src: logo, alt: "logo" }) : jsx("div", {}), jsx(LineFinal, {}), jsx(PageTitle, { children: pageTitle }), jsx(NotificationDescription, { children: notificationDescription }), buttonLink ? (jsx("a", { style: { textDecoration: "none" }, href: buttonLink, target: "_blank", rel: "noopener noreferrer", children: jsx(ButtonLink, { children: buttonText }) })) : (jsx("div", {})), code && jsx(LineFinal, {}), code ? (jsxs(ColumContainer, { children: [jsx(PageTitle, { children: "C\u00F3digo" }), jsx(CodeContainer, { children: jsx(CodeText, { children: code }) })] })) : (jsx("div", {})), discountRules ? (jsx(DiscountRules, { children: discountRules })) : (jsx("div", {}))] })] }));
+const InternalNotificationScreen = ({ barText, buttonText, code, discountRules, banner, notificationDescription, pageTitle, bannerType, }) => {
+    return (jsx(Container$1, { children: jsxs(ContainerInternal$1, { children: [jsxs(TopBar$1, { children: [jsx(ArrowLeft$1, { alt: "seta", src: "https://node.clubecerto.com.br/superapp/images/assets/station/left-arrow.png" }), jsx(BarText$1, { children: barText ? barText : "Notificação" }), jsx("div", {})] }), jsxs(ContentContainer$1, { children: [banner ? (jsx(Logo, { src: banner, alt: "logo", bannerType: bannerType })) : (jsx("div", {})), jsx(PageTitle, { children: pageTitle }), jsx(NotificationDescription, { children: notificationDescription }), code ? (jsx(ColumContainer, { children: jsx(CodeContainer, { children: jsx(CodeText, { children: code }) }) })) : (jsx("div", {})), discountRules ? (jsx(DiscountRules, { children: discountRules })) : (jsx("div", {})), buttonText ? jsx(ButtonLink, { children: buttonText }) : jsx("div", {})] })] }) }));
 };
 
-export { ExternalNotificationScreen, InternalNotificationScreen };
+const Arrow = (props) => (jsx("svg", Object.assign({}, props, { xmlns: "http://www.w3.org/2000/svg", width: 8, height: 14, fill: "none", children: jsx("path", { stroke: "white", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: 2, d: "M7 13 1 7l6-6" }) })));
+
+const Container = styled.div `
+  position: relative;
+  flex-direction: column;
+  width: 250px;
+  height: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url("https://node.clubecerto.com.br/superapp/images/assets/station/celphoneIcon.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+`;
+const ContainerInternal = styled.div `
+  background-color: #8f0cf2;
+  width: 220px;
+  height: 480px;
+  flex-direction: column;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-top-left-radius: 14px;
+  border-top-right-radius: 14px;
+`;
+const TopBar = styled.div `
+  display: flex;
+  width: 100%;
+  height: 50px;
+  margin-top: 10px;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #8f0cf2;
+  color: #fff;
+  font-size: 18px;
+  font-weight: bold;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+`;
+const ArrowLeft = styled(Arrow) `
+  margin-left: 14px;
+  margin-top: 15px;
+`;
+const BarText = styled.div `
+  font-size: 15px;
+  font-family: "Nexa Bold";
+  margin-left: 10px;
+  margin-top: 18px;
+  width: 50%;
+`;
+const ContentContainer = styled.div `
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  margin-top: 2px;
+  background-color: white;
+  height: 90%;
+  border-top-left-radius: 14px;
+  border-top-right-radius: 14px;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  overflow-y: auto;
+`;
+const Card = styled.div `
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  margin-top: 2px;
+  background-color: lightgray;
+  margin-top: 20px;
+  min-height: 60px;
+  border-radius: 15px;
+`;
+const ContentCard = styled.div `
+  display: flex;
+  flex-direction: row;
+  width: 90%;
+  margin-top: 10px;
+  margin-left: 5px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 15px;
+`;
+const ContentCardText = styled.div `
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 8px;
+`;
+const TextCard = styled.p `
+  margin: 0;
+  font-family: "Nexa Regular";
+  font-size: 12px;
+  width: 100%;
+  max-width: 100%;
+  text-align: start;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  white-space: normal;
+`;
+const LogoCard = styled.img `
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+`;
+
+const ListNotificationScreen = ({ logo, description, title, }) => {
+    return (jsx(Container, { children: jsxs(ContainerInternal, { children: [jsxs(TopBar, { children: [jsx(ArrowLeft, {}), jsx(BarText, { children: " Notificac\u0327a\u0303o" }), jsx("div", {})] }), jsx(ContentContainer, { children: jsx(Card, { children: jsxs(ContentCard, { children: [jsx(LogoCard, { src: logo }), jsxs(ContentCardText, { children: [jsx(TextCard, { children: title }), jsx(TextCard, { children: description })] })] }) }) })] }) }));
+};
+
+export { ExternalNotificationScreen, InternalNotificationScreen, ListNotificationScreen };
 //# sourceMappingURL=index.esm.js.map
