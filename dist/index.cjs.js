@@ -291,7 +291,7 @@ const TopBar = styled.div `
 `;
 const ArrowLeft = styled(Arrow) `
   margin-left: 14px;
-  margin-top: 15px;
+  margin-top: 17px;
 `;
 const BarText = styled.div `
   font-size: 15px;

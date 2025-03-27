@@ -41,7 +41,7 @@ export const TopBar = styled.div`
 
 export const ArrowLeft = styled(Arrow)`
   margin-left: 14px;
-  margin-top: 15px;
+  margin-top: 17px;
 `;
 
 export const BarText = styled.div`
