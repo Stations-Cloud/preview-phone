@@ -74,6 +74,8 @@ const ExternalNotificationScreen = ({ title, description, }) => {
 
 const ArrowRight = (props) => (jsx("svg", Object.assign({}, props, { xmlns: "http://www.w3.org/2000/svg", width: 15, height: 12, fill: "none", children: jsx("path", { stroke: "white", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: 2, d: "M1 6h13m0 0-5-5m5 5-5 5" }) })));
 
+const Copy = (props) => (jsx("svg", Object.assign({}, props, { xmlns: "http://www.w3.org/2000/svg", width: 16, height: 16, fill: "none", viewBox: "0 0 23 22", children: jsx("path", { stroke: "#616161", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: 2, d: "M15.7 7V4.2c0-1.12 0-1.68-.218-2.108a2 2 0 0 0-.874-.874C14.18 1 13.62 1 12.5 1H4.9c-1.12 0-1.68 0-2.108.218a2 2 0 0 0-.874.874C1.7 2.52 1.7 3.08 1.7 4.2v7.6c0 1.12 0 1.68.218 2.108a2 2 0 0 0 .874.874C3.22 15 3.78 15 4.9 15h2.8m3.2 6h7.6c1.12 0 1.68 0 2.108-.218a2 2 0 0 0 .874-.874c.218-.428.218-.988.218-2.108v-7.6c0-1.12 0-1.68-.218-2.108a2 2 0 0 0-.874-.874C20.18 7 19.62 7 18.5 7h-7.6c-1.12 0-1.68 0-2.108.218a2 2 0 0 0-.874.874C7.7 8.52 7.7 9.08 7.7 10.2v7.6c0 1.12 0 1.68.218 2.108a2 2 0 0 0 .874.874C9.22 21 9.78 21 10.9 21Z" }) })));
+
 const Share = (props) => (jsx("svg", Object.assign({}, props, { xmlns: "http://www.w3.org/2000/svg", width: 16, height: 16, fill: "none", children: jsx("path", { stroke: "white", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: 1.5, d: "M15 5V1m0 0h-4m4 0-7 7M6 1H4.8c-1.26 0-2.04 0-2.51.25a2 2 0 0 0-.92.92C1 2.76 1 3.48 1 4.8v6.4c0 1.26 0 2.04.25 2.51a2 2 0 0 0 .92.92C2.76 15 3.48 15 4.8 15h6.4c1.26 0 2.04 0 2.51-.25a2 2 0 0 0 .92-.92C15 13.24 15 12.52 15 11.2V9" }) })));
 
 const Arrow = (props) => (jsx("svg", Object.assign({}, props, { xmlns: "http://www.w3.org/2000/svg", width: 8, height: 14, fill: "none", children: jsx("path", { stroke: "white", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: 2, d: "M7 13 1 7l6-6" }) })));
@@ -177,20 +179,27 @@ const PageTitle = styled.h1 `
 const ColumContainer = styled.div `
   display: flex;
   width: 100%;
+  height: 50px;
+  align-items: center;
+  justify-content: center;
   flex-direction: column;
   align-items: center;
+  background-color: #f5f5f5;
 `;
 const CodeContainer = styled.div `
   display: flex;
-  border: 1px solid gray;
+  border: 1px solid lightgray;
+  gap: 20px;
   height: 30px;
   width: 80%;
+  align-items: center;
   border-radius: 30px;
-  justify-content: center;
+  justify-content: space-evenly;
 `;
 const CodeText = styled.p `
   font-size: 14px;
   font-weight: 600;
+  padding-top: 3px;
   align-self: center;
   font-family: "Nexa Regular";
   letter-spacing: 1px;
@@ -239,7 +248,7 @@ const DiscountRules = styled.p `
 `;
 
 const InternalNotificationScreen = ({ buttonText, code, discountRules, banner, notificationDescription, pageTitle, bannerType, buttonType, }) => {
-    return (jsx(Container$1, { children: jsxs(ContainerInternal$1, { children: [jsxs(TopBar$1, { children: [jsx(ArrowLeft$1, {}), jsx(BarText$1, { children: " Notificac\u0327a\u0303o" }), jsx("div", {})] }), jsxs(ContentContainer$1, { children: [banner ? (jsx(Logo, { src: banner, alt: "logo", bannerType: bannerType })) : (jsx("div", {})), jsx(PageTitle, { children: pageTitle }), jsx(NotificationDescription, { children: notificationDescription }), code ? (jsx(ColumContainer, { children: jsx(CodeContainer, { children: jsx(CodeText, { children: code }) }) })) : (jsx("div", {})), discountRules ? (jsxs("div", { children: [jsx(TermsText, { children: "Termos e Condic\u0327o\u0303es" }), jsx(DiscountRules, { children: discountRules })] })) : (jsx("div", {})), buttonText && buttonType === "internal" ? (jsxs(ButtonLink, { children: [buttonText, " ", jsx(ArrowRight, {})] })) : buttonText && buttonType === "external" ? (jsxs(ButtonLink, { children: [buttonText, " ", jsx(Share, {})] })) : (jsx("div", {}))] })] }) }));
+    return (jsx(Container$1, { children: jsxs(ContainerInternal$1, { children: [jsxs(TopBar$1, { children: [jsx(ArrowLeft$1, {}), jsx(BarText$1, { children: " Notificac\u0327a\u0303o" }), jsx("div", {})] }), jsxs(ContentContainer$1, { children: [banner ? (jsx(Logo, { src: banner, alt: "logo", bannerType: bannerType })) : (jsx("div", {})), jsx(PageTitle, { children: pageTitle }), jsx(NotificationDescription, { children: notificationDescription }), code ? (jsx(ColumContainer, { children: jsxs(CodeContainer, { children: [jsx("div", {}), jsx(CodeText, { children: code }), jsx(Copy, {})] }) })) : (jsx("div", {})), discountRules ? (jsxs("div", { children: [jsx(TermsText, { children: "Termos e Condic\u0327o\u0303es" }), jsx(DiscountRules, { children: discountRules })] })) : (jsx("div", {})), buttonText && buttonType === "internal" ? (jsxs(ButtonLink, { children: [buttonText, " ", jsx(ArrowRight, {})] })) : buttonText && buttonType === "external" ? (jsxs(ButtonLink, { children: [buttonText, " ", jsx(Share, {})] })) : (jsx("div", {}))] })] }) }));
 };
 
 const Container = styled.div `
@@ -271,7 +280,6 @@ const TopBar = styled.div `
   height: 50px;
   margin-top: 10px;
   justify-content: space-between;
-  align-items: center;
   background-color: #8f0cf2;
   color: #fff;
   font-size: 18px;
@@ -310,7 +318,7 @@ const Card = styled.div `
   flex-direction: column;
   width: 90%;
   margin-top: 2px;
-  background-color: lightgray;
+  background-color: #eeeeee;
   margin-top: 20px;
   min-height: 60px;
   border-radius: 15px;

@@ -1,4 +1,5 @@
 import ArrowRight from "../../icons/ArrowRigth";
+import Copy from "../../icons/Copy";
 import Share from "../../icons/Share";
 import {
   ArrowLeft,
@@ -62,7 +63,9 @@ const InternalNotificationScreen: React.FC<InternalNotificationScreenProps> = ({
           {code ? (
             <ColumContainer>
               <CodeContainer>
+                <div />
                 <CodeText>{code}</CodeText>
+                <Copy />
               </CodeContainer>
             </ColumContainer>
           ) : (

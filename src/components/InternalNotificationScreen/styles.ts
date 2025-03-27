@@ -109,22 +109,29 @@ export const PageTitle = styled.h1`
 export const ColumContainer = styled.div`
   display: flex;
   width: 100%;
+  height: 50px;
+  align-items: center;
+  justify-content: center;
   flex-direction: column;
   align-items: center;
+  background-color: #f5f5f5;
 `;
 
 export const CodeContainer = styled.div`
   display: flex;
-  border: 1px solid gray;
+  border: 1px solid lightgray;
+  gap: 20px;
   height: 30px;
   width: 80%;
+  align-items: center;
   border-radius: 30px;
-  justify-content: center;
+  justify-content: space-evenly;
 `;
 
 export const CodeText = styled.p`
   font-size: 14px;
   font-weight: 600;
+  padding-top: 3px;
   align-self: center;
   font-family: "Nexa Regular";
   letter-spacing: 1px;

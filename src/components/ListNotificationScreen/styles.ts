@@ -31,7 +31,6 @@ export const TopBar = styled.div`
   height: 50px;
   margin-top: 10px;
   justify-content: space-between;
-  align-items: center;
   background-color: #8f0cf2;
   color: #fff;
   font-size: 18px;
@@ -74,7 +73,7 @@ export const Card = styled.div`
   flex-direction: column;
   width: 90%;
   margin-top: 2px;
-  background-color: lightgray;
+  background-color: #eeeeee;
   margin-top: 20px;
   min-height: 60px;
   border-radius: 15px;
