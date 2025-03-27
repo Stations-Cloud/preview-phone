@@ -1,5 +1,4 @@
 interface InternalNotificationScreenProps {
-    barText?: string;
     banner?: string;
     bannerType?: "vertical" | "horizontal" | "small";
     pageTitle?: string;
@@ -7,6 +6,7 @@ interface InternalNotificationScreenProps {
     code?: string;
     discountRules?: string;
     buttonText?: string;
+    buttonType: "internal" | "external";
 }
 declare const InternalNotificationScreen: React.FC<InternalNotificationScreenProps>;
 export default InternalNotificationScreen;

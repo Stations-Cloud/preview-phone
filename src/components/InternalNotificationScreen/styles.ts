@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import Arrow from "../../icons/Arrow";
 
 export const Container = styled.div`
   position: relative;
@@ -37,11 +38,9 @@ export const TopBar = styled.div`
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
 `;
-export const ArrowLeft = styled.img`
-  width: 16px;
-  height: 12px;
-  margin-left: 10px;
-  margin-top: 18px;
+export const ArrowLeft = styled(Arrow)`
+  margin-left: 14px;
+  margin-top: 17px;
 `;
 
 export const BarText = styled.div`
@@ -137,6 +136,7 @@ export const NotificationDescription = styled.p`
 export const ButtonLink = styled.button`
   display: flex;
   justify-content: center;
+  gap: 10px;
   align-items: center;
   background-color: #8f0cf2;
   color: #fff;

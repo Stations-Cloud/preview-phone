@@ -74,6 +74,12 @@ const ExternalNotificationScreen = ({ title, description, }) => {
     return (jsxRuntime.jsx(Container$2, { children: jsxRuntime.jsxs(MainContainer, { children: [jsxRuntime.jsx(TitleContainer, { children: jsxRuntime.jsx(TitleNotification, { children: title }) }), jsxRuntime.jsx(DescriptionContainer, { children: jsxRuntime.jsx(DescriptionNotification, { children: description }) })] }) }));
 };
 
+const ArrowRight = (props) => (jsxRuntime.jsx("svg", Object.assign({}, props, { xmlns: "http://www.w3.org/2000/svg", width: 15, height: 12, fill: "none", children: jsxRuntime.jsx("path", { stroke: "white", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: 2, d: "M1 6h13m0 0-5-5m5 5-5 5" }) })));
+
+const Share = (props) => (jsxRuntime.jsx("svg", Object.assign({}, props, { xmlns: "http://www.w3.org/2000/svg", width: 16, height: 16, fill: "none", children: jsxRuntime.jsx("path", { stroke: "white", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: 1.5, d: "M15 5V1m0 0h-4m4 0-7 7M6 1H4.8c-1.26 0-2.04 0-2.51.25a2 2 0 0 0-.92.92C1 2.76 1 3.48 1 4.8v6.4c0 1.26 0 2.04.25 2.51a2 2 0 0 0 .92.92C2.76 15 3.48 15 4.8 15h6.4c1.26 0 2.04 0 2.51-.25a2 2 0 0 0 .92-.92C15 13.24 15 12.52 15 11.2V9" }) })));
+
+const Arrow = (props) => (jsxRuntime.jsx("svg", Object.assign({}, props, { xmlns: "http://www.w3.org/2000/svg", width: 8, height: 14, fill: "none", children: jsxRuntime.jsx("path", { stroke: "white", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: 2, d: "M7 13 1 7l6-6" }) })));
+
 const Container$1 = styled.div `
   position: relative;
   flex-direction: column;
@@ -111,11 +117,9 @@ const TopBar$1 = styled.div `
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
 `;
-const ArrowLeft$1 = styled.img `
-  width: 16px;
-  height: 12px;
-  margin-left: 10px;
-  margin-top: 18px;
+const ArrowLeft$1 = styled(Arrow) `
+  margin-left: 14px;
+  margin-top: 17px;
 `;
 const BarText$1 = styled.div `
   font-size: 15px;
@@ -199,6 +203,7 @@ const NotificationDescription = styled.p `
 const ButtonLink = styled.button `
   display: flex;
   justify-content: center;
+  gap: 10px;
   align-items: center;
   background-color: #8f0cf2;
   color: #fff;
@@ -227,11 +232,9 @@ const DiscountRules = styled.p `
   width: 95%;
 `;
 
-const InternalNotificationScreen = ({ barText, buttonText, code, discountRules, banner, notificationDescription, pageTitle, bannerType, }) => {
-    return (jsxRuntime.jsx(Container$1, { children: jsxRuntime.jsxs(ContainerInternal$1, { children: [jsxRuntime.jsxs(TopBar$1, { children: [jsxRuntime.jsx(ArrowLeft$1, { alt: "seta", src: "https://node.clubecerto.com.br/superapp/images/assets/station/left-arrow.png" }), jsxRuntime.jsx(BarText$1, { children: barText ? barText : "Notificação" }), jsxRuntime.jsx("div", {})] }), jsxRuntime.jsxs(ContentContainer$1, { children: [banner ? (jsxRuntime.jsx(Logo, { src: banner, alt: "logo", bannerType: bannerType })) : (jsxRuntime.jsx("div", {})), jsxRuntime.jsx(PageTitle, { children: pageTitle }), jsxRuntime.jsx(NotificationDescription, { children: notificationDescription }), code ? (jsxRuntime.jsx(ColumContainer, { children: jsxRuntime.jsx(CodeContainer, { children: jsxRuntime.jsx(CodeText, { children: code }) }) })) : (jsxRuntime.jsx("div", {})), discountRules ? (jsxRuntime.jsx(DiscountRules, { children: discountRules })) : (jsxRuntime.jsx("div", {})), buttonText ? jsxRuntime.jsx(ButtonLink, { children: buttonText }) : jsxRuntime.jsx("div", {})] })] }) }));
+const InternalNotificationScreen = ({ buttonText, code, discountRules, banner, notificationDescription, pageTitle, bannerType, buttonType, }) => {
+    return (jsxRuntime.jsx(Container$1, { children: jsxRuntime.jsxs(ContainerInternal$1, { children: [jsxRuntime.jsxs(TopBar$1, { children: [jsxRuntime.jsx(ArrowLeft$1, {}), jsxRuntime.jsx(BarText$1, { children: " Notificac\u0327a\u0303o" }), jsxRuntime.jsx("div", {})] }), jsxRuntime.jsxs(ContentContainer$1, { children: [banner ? (jsxRuntime.jsx(Logo, { src: banner, alt: "logo", bannerType: bannerType })) : (jsxRuntime.jsx("div", {})), jsxRuntime.jsx(PageTitle, { children: pageTitle }), jsxRuntime.jsx(NotificationDescription, { children: notificationDescription }), code ? (jsxRuntime.jsx(ColumContainer, { children: jsxRuntime.jsx(CodeContainer, { children: jsxRuntime.jsx(CodeText, { children: code }) }) })) : (jsxRuntime.jsx("div", {})), discountRules ? (jsxRuntime.jsx(DiscountRules, { children: discountRules })) : (jsxRuntime.jsx("div", {})), buttonText && buttonType === "internal" ? (jsxRuntime.jsxs(ButtonLink, { children: [buttonText, " ", jsxRuntime.jsx(ArrowRight, {})] })) : buttonText && buttonType === "external" ? (jsxRuntime.jsxs(ButtonLink, { children: [buttonText, " ", jsxRuntime.jsx(Share, {})] })) : (jsxRuntime.jsx("div", {}))] })] }) }));
 };
-
-const Arrow = (props) => (jsxRuntime.jsx("svg", Object.assign({}, props, { xmlns: "http://www.w3.org/2000/svg", width: 8, height: 14, fill: "none", children: jsxRuntime.jsx("path", { stroke: "white", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: 2, d: "M7 13 1 7l6-6" }) })));
 
 const Container = styled.div `
   position: relative;

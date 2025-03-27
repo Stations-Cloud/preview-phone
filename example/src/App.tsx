@@ -9,7 +9,7 @@ function App() {
     <div style={{ display: "flex", gap: 50 }}>
       <ExternalNotificationScreen description="teste" title="teste" />
       <InternalNotificationScreen
-        barText="Notificação"
+        buttonType="internal"
         buttonText="Ir para o site"
         bannerType="small"
         code="8JBOLXYE"

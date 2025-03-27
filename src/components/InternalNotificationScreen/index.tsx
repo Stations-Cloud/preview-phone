@@ -1,3 +1,5 @@
+import ArrowRight from "../../icons/ArrowRigth";
+import Share from "../../icons/Share";
 import {
   ArrowLeft,
   BarText,
@@ -16,7 +18,6 @@ import {
 } from "./styles";
 
 interface InternalNotificationScreenProps {
-  barText?: string;
   banner?: string;
   bannerType?: "vertical" | "horizontal" | "small";
   pageTitle?: string;
@@ -24,10 +25,10 @@ interface InternalNotificationScreenProps {
   code?: string;
   discountRules?: string;
   buttonText?: string;
+  buttonType: "internal" | "external";
 }
 
 const InternalNotificationScreen: React.FC<InternalNotificationScreenProps> = ({
-  barText,
   buttonText,
   code,
   discountRules,
@@ -35,16 +36,14 @@ const InternalNotificationScreen: React.FC<InternalNotificationScreenProps> = ({
   notificationDescription,
   pageTitle,
   bannerType,
+  buttonType,
 }) => {
   return (
     <Container>
       <ContainerInternal>
         <TopBar>
-          <ArrowLeft
-            alt="seta"
-            src="https://node.clubecerto.com.br/superapp/images/assets/station/left-arrow.png"
-          />
-          <BarText>{barText ? barText : "Notificação"}</BarText>
+          <ArrowLeft />
+          <BarText> Notificação</BarText>
           <div />
         </TopBar>
         <ContentContainer>
@@ -73,7 +72,17 @@ const InternalNotificationScreen: React.FC<InternalNotificationScreenProps> = ({
           ) : (
             <div />
           )}
-          {buttonText ? <ButtonLink>{buttonText}</ButtonLink> : <div />}
+          {buttonText && buttonType === "internal" ? (
+            <ButtonLink>
+              {buttonText} <ArrowRight />
+            </ButtonLink>
+          ) : buttonText && buttonType === "external" ? (
+            <ButtonLink>
+              {buttonText} <Share />
+            </ButtonLink>
+          ) : (
+            <div />
+          )}
         </ContentContainer>
       </ContainerInternal>
     </Container>
