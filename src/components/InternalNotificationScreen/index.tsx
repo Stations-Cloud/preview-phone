@@ -17,24 +17,24 @@ import {
 
 interface InternalNotificationScreenProps {
   barText?: string;
-  logo?: string;
+  banner?: string;
+  bannerType?: "vertical" | "horizontal" | "small";
   pageTitle?: string;
   notificationDescription?: string;
   code?: string;
   discountRules?: string;
   buttonText?: string;
-  buttonLink?: string;
 }
 
 const InternalNotificationScreen: React.FC<InternalNotificationScreenProps> = ({
   barText,
-  buttonLink,
   buttonText,
   code,
   discountRules,
-  logo,
+  banner,
   notificationDescription,
   pageTitle,
+  bannerType,
 }) => {
   return (
     <Container>
@@ -48,7 +48,11 @@ const InternalNotificationScreen: React.FC<InternalNotificationScreenProps> = ({
           <div />
         </TopBar>
         <ContentContainer>
-          {logo ? <Logo src={logo} alt="logo" /> : <div />}
+          {banner ? (
+            <Logo src={banner} alt="logo" bannerType={bannerType} />
+          ) : (
+            <div />
+          )}
 
           <PageTitle>{pageTitle}</PageTitle>
           <NotificationDescription>
@@ -69,18 +73,7 @@ const InternalNotificationScreen: React.FC<InternalNotificationScreenProps> = ({
           ) : (
             <div />
           )}
-          {buttonLink ? (
-            <a
-              style={{ textDecoration: "none" }}
-              href={buttonLink}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <ButtonLink>{buttonText}</ButtonLink>
-            </a>
-          ) : (
-            <div />
-          )}
+          {buttonText ? <ButtonLink>{buttonText}</ButtonLink> : <div />}
         </ContentContainer>
       </ContainerInternal>
     </Container>

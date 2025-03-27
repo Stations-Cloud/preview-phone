@@ -63,18 +63,32 @@ export const ContentContainer = styled.div`
   height: 90%;
   border-top-left-radius: 14px;
   border-top-right-radius: 14px;
-  border-bottom-left-radius: 5px;
-  border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 3px;
+  border-bottom-right-radius: 3px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
   overflow-y: auto;
 `;
 
-export const Logo = styled.img`
+export const Logo = styled.img<{
+  bannerType?: "vertical" | "horizontal" | "small";
+}>`
   align-self: center;
-  height: 130px;
-  width: 130px;
-`;
+  border-radius: 14px;
 
+  width: ${({ bannerType }) =>
+    bannerType === "horizontal"
+      ? "90%"
+      : bannerType === "vertical"
+      ? "120px"
+      : "100px"};
+
+  height: ${({ bannerType }) =>
+    bannerType === "vertical"
+      ? "170px"
+      : bannerType === "horizontal"
+      ? "100px"
+      : "100px"};
+`;
 export const PageTitle = styled.h1`
   font-size: 14px;
   font-family: "Nexa Regular";
