@@ -3,6 +3,7 @@ export declare const ContainerInternal: import("styled-components").StyledCompon
 export declare const TopBar: import("styled-components").StyledComponent<"div", any, {}, never>;
 export declare const ArrowLeft: import("styled-components").StyledComponent<(props: import("react").SVGProps<SVGSVGElement>) => import("react/jsx-runtime").JSX.Element, any, {}, never>;
 export declare const BarText: import("styled-components").StyledComponent<"div", any, {}, never>;
+export declare const TermsText: import("styled-components").StyledComponent<"div", any, {}, never>;
 export declare const ContentContainer: import("styled-components").StyledComponent<"div", any, {}, never>;
 export declare const Logo: import("styled-components").StyledComponent<"img", any, {
     bannerType?: "vertical" | "horizontal" | "small";

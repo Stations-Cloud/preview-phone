@@ -126,6 +126,13 @@ const BarText$1 = styled.div `
   margin-top: 18px;
   width: 50%;
 `;
+const TermsText = styled.div `
+  font-size: 18px;
+  font-family: "Nexa Bold";
+  margin-left: 10px;
+  margin-top: 18px;
+  width: 80%;
+`;
 const ContentContainer$1 = styled.div `
   display: flex;
   flex-direction: column;
@@ -224,6 +231,7 @@ const DiscountRules = styled.p `
   justify-content: flex-start;
   text-align: start;
   font-size: 9px;
+  margin-left: 5px;
   color: #777;
   margin-top: 20px;
   font-family: "Nexa Regular";
@@ -231,7 +239,7 @@ const DiscountRules = styled.p `
 `;
 
 const InternalNotificationScreen = ({ buttonText, code, discountRules, banner, notificationDescription, pageTitle, bannerType, buttonType, }) => {
-    return (jsx(Container$1, { children: jsxs(ContainerInternal$1, { children: [jsxs(TopBar$1, { children: [jsx(ArrowLeft$1, {}), jsx(BarText$1, { children: " Notificac\u0327a\u0303o" }), jsx("div", {})] }), jsxs(ContentContainer$1, { children: [banner ? (jsx(Logo, { src: banner, alt: "logo", bannerType: bannerType })) : (jsx("div", {})), jsx(PageTitle, { children: pageTitle }), jsx(NotificationDescription, { children: notificationDescription }), code ? (jsx(ColumContainer, { children: jsx(CodeContainer, { children: jsx(CodeText, { children: code }) }) })) : (jsx("div", {})), discountRules ? (jsx(DiscountRules, { children: discountRules })) : (jsx("div", {})), buttonText && buttonType === "internal" ? (jsxs(ButtonLink, { children: [buttonText, " ", jsx(ArrowRight, {})] })) : buttonText && buttonType === "external" ? (jsxs(ButtonLink, { children: [buttonText, " ", jsx(Share, {})] })) : (jsx("div", {}))] })] }) }));
+    return (jsx(Container$1, { children: jsxs(ContainerInternal$1, { children: [jsxs(TopBar$1, { children: [jsx(ArrowLeft$1, {}), jsx(BarText$1, { children: " Notificac\u0327a\u0303o" }), jsx("div", {})] }), jsxs(ContentContainer$1, { children: [banner ? (jsx(Logo, { src: banner, alt: "logo", bannerType: bannerType })) : (jsx("div", {})), jsx(PageTitle, { children: pageTitle }), jsx(NotificationDescription, { children: notificationDescription }), code ? (jsx(ColumContainer, { children: jsx(CodeContainer, { children: jsx(CodeText, { children: code }) }) })) : (jsx("div", {})), discountRules ? (jsxs("div", { children: [jsx(TermsText, { children: "Termos e Condic\u0327o\u0303es" }), jsx(DiscountRules, { children: discountRules })] })) : (jsx("div", {})), buttonText && buttonType === "internal" ? (jsxs(ButtonLink, { children: [buttonText, " ", jsx(ArrowRight, {})] })) : buttonText && buttonType === "external" ? (jsxs(ButtonLink, { children: [buttonText, " ", jsx(Share, {})] })) : (jsx("div", {}))] })] }) }));
 };
 
 const Container = styled.div `

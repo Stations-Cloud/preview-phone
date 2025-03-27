@@ -14,6 +14,7 @@ import {
   Logo,
   NotificationDescription,
   PageTitle,
+  TermsText,
   TopBar,
 } from "./styles";
 
@@ -68,7 +69,10 @@ const InternalNotificationScreen: React.FC<InternalNotificationScreenProps> = ({
             <div />
           )}
           {discountRules ? (
-            <DiscountRules>{discountRules}</DiscountRules>
+            <div>
+              <TermsText>Termos e Condições</TermsText>
+              <DiscountRules>{discountRules}</DiscountRules>
+            </div>
           ) : (
             <div />
           )}

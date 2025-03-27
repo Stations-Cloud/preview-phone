@@ -128,6 +128,13 @@ const BarText$1 = styled.div `
   margin-top: 18px;
   width: 50%;
 `;
+const TermsText = styled.div `
+  font-size: 18px;
+  font-family: "Nexa Bold";
+  margin-left: 10px;
+  margin-top: 18px;
+  width: 80%;
+`;
 const ContentContainer$1 = styled.div `
   display: flex;
   flex-direction: column;
@@ -226,6 +233,7 @@ const DiscountRules = styled.p `
   justify-content: flex-start;
   text-align: start;
   font-size: 9px;
+  margin-left: 5px;
   color: #777;
   margin-top: 20px;
   font-family: "Nexa Regular";
@@ -233,7 +241,7 @@ const DiscountRules = styled.p `
 `;
 
 const InternalNotificationScreen = ({ buttonText, code, discountRules, banner, notificationDescription, pageTitle, bannerType, buttonType, }) => {
-    return (jsxRuntime.jsx(Container$1, { children: jsxRuntime.jsxs(ContainerInternal$1, { children: [jsxRuntime.jsxs(TopBar$1, { children: [jsxRuntime.jsx(ArrowLeft$1, {}), jsxRuntime.jsx(BarText$1, { children: " Notificac\u0327a\u0303o" }), jsxRuntime.jsx("div", {})] }), jsxRuntime.jsxs(ContentContainer$1, { children: [banner ? (jsxRuntime.jsx(Logo, { src: banner, alt: "logo", bannerType: bannerType })) : (jsxRuntime.jsx("div", {})), jsxRuntime.jsx(PageTitle, { children: pageTitle }), jsxRuntime.jsx(NotificationDescription, { children: notificationDescription }), code ? (jsxRuntime.jsx(ColumContainer, { children: jsxRuntime.jsx(CodeContainer, { children: jsxRuntime.jsx(CodeText, { children: code }) }) })) : (jsxRuntime.jsx("div", {})), discountRules ? (jsxRuntime.jsx(DiscountRules, { children: discountRules })) : (jsxRuntime.jsx("div", {})), buttonText && buttonType === "internal" ? (jsxRuntime.jsxs(ButtonLink, { children: [buttonText, " ", jsxRuntime.jsx(ArrowRight, {})] })) : buttonText && buttonType === "external" ? (jsxRuntime.jsxs(ButtonLink, { children: [buttonText, " ", jsxRuntime.jsx(Share, {})] })) : (jsxRuntime.jsx("div", {}))] })] }) }));
+    return (jsxRuntime.jsx(Container$1, { children: jsxRuntime.jsxs(ContainerInternal$1, { children: [jsxRuntime.jsxs(TopBar$1, { children: [jsxRuntime.jsx(ArrowLeft$1, {}), jsxRuntime.jsx(BarText$1, { children: " Notificac\u0327a\u0303o" }), jsxRuntime.jsx("div", {})] }), jsxRuntime.jsxs(ContentContainer$1, { children: [banner ? (jsxRuntime.jsx(Logo, { src: banner, alt: "logo", bannerType: bannerType })) : (jsxRuntime.jsx("div", {})), jsxRuntime.jsx(PageTitle, { children: pageTitle }), jsxRuntime.jsx(NotificationDescription, { children: notificationDescription }), code ? (jsxRuntime.jsx(ColumContainer, { children: jsxRuntime.jsx(CodeContainer, { children: jsxRuntime.jsx(CodeText, { children: code }) }) })) : (jsxRuntime.jsx("div", {})), discountRules ? (jsxRuntime.jsxs("div", { children: [jsxRuntime.jsx(TermsText, { children: "Termos e Condic\u0327o\u0303es" }), jsxRuntime.jsx(DiscountRules, { children: discountRules })] })) : (jsxRuntime.jsx("div", {})), buttonText && buttonType === "internal" ? (jsxRuntime.jsxs(ButtonLink, { children: [buttonText, " ", jsxRuntime.jsx(ArrowRight, {})] })) : buttonText && buttonType === "external" ? (jsxRuntime.jsxs(ButtonLink, { children: [buttonText, " ", jsxRuntime.jsx(Share, {})] })) : (jsxRuntime.jsx("div", {}))] })] }) }));
 };
 
 const Container = styled.div `
