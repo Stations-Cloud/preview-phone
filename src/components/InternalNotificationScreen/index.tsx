@@ -1,13 +1,14 @@
 import {
+  ArrowLeft,
   BarText,
   ButtonLink,
   CodeContainer,
   CodeText,
   ColumContainer,
   Container,
+  ContainerInternal,
   ContentContainer,
   DiscountRules,
-  LineFinal,
   Logo,
   NotificationDescription,
   PageTitle,
@@ -37,45 +38,51 @@ const InternalNotificationScreen: React.FC<InternalNotificationScreenProps> = ({
 }) => {
   return (
     <Container>
-      <TopBar>
-        <BarText>{barText ? barText : "Notificação"}</BarText>
-      </TopBar>
-      <ContentContainer>
-        {logo ? <Logo src={logo} alt="logo" /> : <div />}
-        <LineFinal />
-        <PageTitle>{pageTitle}</PageTitle>
-        <NotificationDescription>
-          {notificationDescription}
-        </NotificationDescription>
-        {buttonLink ? (
-          <a
-            style={{ textDecoration: "none" }}
-            href={buttonLink}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <ButtonLink>{buttonText}</ButtonLink>
-          </a>
-        ) : (
+      <ContainerInternal>
+        <TopBar>
+          <ArrowLeft
+            alt="seta"
+            src="https://node.clubecerto.com.br/superapp/images/assets/station/left-arrow.png"
+          />
+          <BarText>{barText ? barText : "Notificação"}</BarText>
           <div />
-        )}
-        {code && <LineFinal />}
-        {code ? (
-          <ColumContainer>
-            <PageTitle>Código</PageTitle>
-            <CodeContainer>
-              <CodeText>{code}</CodeText>
-            </CodeContainer>
-          </ColumContainer>
-        ) : (
-          <div />
-        )}
-        {discountRules ? (
-          <DiscountRules>{discountRules}</DiscountRules>
-        ) : (
-          <div />
-        )}
-      </ContentContainer>
+        </TopBar>
+        <ContentContainer>
+          {logo ? <Logo src={logo} alt="logo" /> : <div />}
+
+          <PageTitle>{pageTitle}</PageTitle>
+          <NotificationDescription>
+            {notificationDescription}
+          </NotificationDescription>
+
+          {code ? (
+            <ColumContainer>
+              <CodeContainer>
+                <CodeText>{code}</CodeText>
+              </CodeContainer>
+            </ColumContainer>
+          ) : (
+            <div />
+          )}
+          {discountRules ? (
+            <DiscountRules>{discountRules}</DiscountRules>
+          ) : (
+            <div />
+          )}
+          {buttonLink ? (
+            <a
+              style={{ textDecoration: "none" }}
+              href={buttonLink}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <ButtonLink>{buttonText}</ButtonLink>
+            </a>
+          ) : (
+            <div />
+          )}
+        </ContentContainer>
+      </ContainerInternal>
     </Container>
   );
 };

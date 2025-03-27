@@ -14,7 +14,7 @@ function App() {
         code="8JBOLXYE"
         discountRules="Para conseguir resgatar seu ingresso,
 clique em resgate já e ao finalizar a compra
-insira o código acima"
+insira o código acima "
         logo="https://node.clubecerto.com.br/superapp/images/assets/station/celphoneIcon.svg"
         notificationDescription={`
           Assista "Ainda Estou Aqui" com Fernanda

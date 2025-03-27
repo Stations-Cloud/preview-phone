@@ -13,20 +13,29 @@ export const Container = styled.div`
   background-repeat: no-repeat;
   background-size: contain;
 `;
+export const ContainerInternal = styled.div`
+  background-color: #8f0cf2;
+  width: 220px;
+  height: 480px;
+  flex-direction: column;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-top-left-radius: 14px;
+  border-top-right-radius: 14px;
+`;
 export const TopBar = styled.div`
   display: flex;
-  width: 90%;
+  width: 100%;
   height: 50px;
-  margin-bottom: 30px;
-  justify-content: center;
+  margin-top: 10px;
+  justify-content: space-between;
   background-color: #8f0cf2;
   color: #fff;
   font-size: 18px;
   font-weight: bold;
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
-  border-bottom-right-radius: 5px;
-  border-bottom-left-radius: 5px;
 `;
 export const ArrowLeft = styled.img`
   width: 16px;
@@ -40,6 +49,7 @@ export const BarText = styled.div`
   font-family: "Nexa Bold";
   margin-left: 10px;
   margin-top: 18px;
+  width: 50%;
 `;
 
 export const ContentContainer = styled.div`
@@ -47,22 +57,28 @@ export const ContentContainer = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 80%;
-  height: 80%;
+  width: 100%;
+  margin-top: 2px;
+  background-color: white;
+  height: 90%;
   border-top-left-radius: 14px;
   border-top-right-radius: 14px;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  overflow-y: auto;
 `;
 
 export const Logo = styled.img`
   align-self: center;
-  height: 70px;
-  width: 70px;
+  height: 130px;
+  width: 130px;
 `;
 
 export const PageTitle = styled.h1`
   font-size: 14px;
   font-family: "Nexa Regular";
-  justify-content: center;
+  justify-content: flex-start;
   display: flex;
   font-weight: 400;
   margin-top: 10px;
@@ -78,17 +94,17 @@ export const ColumContainer = styled.div`
 
 export const CodeContainer = styled.div`
   display: flex;
-  border: 1px dashed #8f0cf2;
+  border: 1px solid gray;
   height: 30px;
   width: 80%;
   border-radius: 30px;
   justify-content: center;
-  align-items: center;
 `;
 
 export const CodeText = styled.p`
   font-size: 14px;
   font-weight: 600;
+  align-self: center;
   font-family: "Nexa Regular";
   letter-spacing: 1px;
 `;
@@ -96,9 +112,9 @@ export const CodeText = styled.p`
 export const NotificationDescription = styled.p`
   font-size: 10px;
   font-family: "Nexa Regular";
-  justify-content: center;
+  justify-content: flex-start;
   display: flex;
-  text-align: center;
+  text-align: start;
   color: #666;
   margin-top: 5px;
   width: 95%;
@@ -128,8 +144,8 @@ export const LineFinal = styled.div`
 
 export const DiscountRules = styled.p`
   display: flex;
-  justify-content: center;
-  text-align: center;
+  justify-content: flex-start;
+  text-align: start;
   font-size: 9px;
   color: #777;
   margin-top: 20px;
