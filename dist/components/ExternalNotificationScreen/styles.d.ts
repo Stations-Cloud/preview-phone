@@ -1,6 +1,6 @@
-export declare const Container: import("styled-components").StyledComponent<"div", any, {}, never>;
-export declare const MainContainer: import("styled-components").StyledComponent<"div", any, {}, never>;
-export declare const TitleContainer: import("styled-components").StyledComponent<"div", any, {}, never>;
-export declare const TitleNotification: import("styled-components").StyledComponent<"h1", any, {}, never>;
-export declare const DescriptionContainer: import("styled-components").StyledComponent<"div", any, {}, never>;
-export declare const DescriptionNotification: import("styled-components").StyledComponent<"p", any, {}, never>;
+export declare const Container: import("styled-components/dist/types").IStyledComponentBase<"web", import("styled-components").FastOmit<import("react").DetailedHTMLProps<import("react").HTMLAttributes<HTMLDivElement>, HTMLDivElement>, never>> & string;
+export declare const MainContainer: import("styled-components/dist/types").IStyledComponentBase<"web", import("styled-components").FastOmit<import("react").DetailedHTMLProps<import("react").HTMLAttributes<HTMLDivElement>, HTMLDivElement>, never>> & string;
+export declare const TitleContainer: import("styled-components/dist/types").IStyledComponentBase<"web", import("styled-components").FastOmit<import("react").DetailedHTMLProps<import("react").HTMLAttributes<HTMLDivElement>, HTMLDivElement>, never>> & string;
+export declare const TitleNotification: import("styled-components/dist/types").IStyledComponentBase<"web", import("styled-components").FastOmit<import("react").DetailedHTMLProps<import("react").HTMLAttributes<HTMLHeadingElement>, HTMLHeadingElement>, never>> & string;
+export declare const DescriptionContainer: import("styled-components/dist/types").IStyledComponentBase<"web", import("styled-components").FastOmit<import("react").DetailedHTMLProps<import("react").HTMLAttributes<HTMLDivElement>, HTMLDivElement>, never>> & string;
+export declare const DescriptionNotification: import("styled-components/dist/types").IStyledComponentBase<"web", import("styled-components").FastOmit<import("react").DetailedHTMLProps<import("react").HTMLAttributes<HTMLParagraphElement>, HTMLParagraphElement>, never>> & string;

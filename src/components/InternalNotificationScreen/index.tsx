@@ -72,7 +72,7 @@ const InternalNotificationScreen: React.FC<InternalNotificationScreenProps> = ({
             <div />
           )}
           {discountRules ? (
-            <div>
+            <div style={{ width: "100%" }}>
               <TermsText>Termos e Condições</TermsText>
               <DiscountRules>{discountRules}</DiscountRules>
             </div>
