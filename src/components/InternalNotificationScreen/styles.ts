@@ -51,11 +51,14 @@ export const BarText = styled.div`
   width: 50%;
 `;
 
-export const TermsText = styled.div`
-  font-size: 18px;
-  font-family: "Nexa Bold";
-  margin-left: 10px;
-  margin-top: 18px;
+export const TermsText = styled.h1`
+  font-size: 14px;
+  margin-left: 5px;
+  font-family: "Nexa Regular";
+  justify-content: flex-start;
+  display: flex;
+  font-weight: 400;
+  margin-top: 10px;
   width: 80%;
 `;
 
@@ -178,7 +181,7 @@ export const DiscountRules = styled.p`
   font-size: 9px;
   margin-left: 5px;
   color: #777;
-  margin-top: 20px;
+  margin-top: 10px;
   font-family: "Nexa Regular";
   width: 95%;
 `;
