@@ -16,17 +16,19 @@ interface ListNotificationScreen {
   logo: string;
   title: string;
   description: string;
+  primaryColor?: string;
 }
 
 const ListNotificationScreen: React.FC<ListNotificationScreen> = ({
   logo,
   description,
   title,
+  primaryColor,
 }) => {
   return (
     <Container>
-      <ContainerInternal>
-        <TopBar>
+      <ContainerInternal primaryColor={primaryColor}>
+        <TopBar primaryColor={primaryColor}>
           <ArrowLeft />
           <BarText> Notificação</BarText>
           <div />

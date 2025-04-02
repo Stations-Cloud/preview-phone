@@ -96,7 +96,7 @@ const Container$1 = styled.div `
   background-size: contain;
 `;
 const ContainerInternal$1 = styled.div `
-  background-color: #8f0cf2;
+  background-color: ${({ primaryColor }) => primaryColor || "#8f0cf2"};
   width: 220px;
   height: 480px;
   flex-direction: column;
@@ -112,7 +112,7 @@ const TopBar$1 = styled.div `
   height: 50px;
   margin-top: 10px;
   justify-content: space-between;
-  background-color: #8f0cf2;
+  background-color: ${({ primaryColor }) => primaryColor || "#8f0cf2"};
   color: #fff;
   font-size: 18px;
   font-weight: bold;
@@ -231,7 +231,7 @@ const ButtonLink = styled.button `
   justify-content: center;
   gap: 10px;
   align-items: center;
-  background-color: #8f0cf2;
+  background-color: ${({ primaryColor }) => primaryColor || "#8f0cf2"};
   color: #fff;
   margin-top: 10px;
   font-size: 12px;
@@ -245,12 +245,6 @@ const ButtonLink = styled.button `
   min-height: 30px;
   flex-shrink: 0;
 `;
-styled.div `
-  height: 1px;
-  background-color: #8f0cf2;
-  margin-top: 20px;
-  width: 100%;
-`;
 const DiscountRules = styled.p `
   display: flex;
   justify-content: flex-start;
@@ -263,8 +257,8 @@ const DiscountRules = styled.p `
   width: 95%;
 `;
 
-const InternalNotificationScreen = ({ buttonText, code, discountRules, banner, notificationDescription, pageTitle, bannerType, buttonType, }) => {
-    return (jsx(Container$1, { children: jsxs(ContainerInternal$1, { children: [jsxs(TopBar$1, { children: [jsx(ArrowLeft$1, {}), jsx(BarText$1, { children: " Notificac\u0327a\u0303o" }), jsx("div", {})] }), jsxs(ContentContainer$1, { children: [banner ? (jsx(Logo, { src: banner, alt: "logo", bannerType: bannerType })) : (jsx("div", {})), jsx(PageTitle, { children: pageTitle }), jsx(NotificationDescription, { children: notificationDescription }), code ? (jsx(ColumContainer, { children: jsxs(CodeContainer, { children: [jsx("div", {}), jsx(CodeText, { children: code }), jsx(Copy, {})] }) })) : (jsx("div", {})), discountRules ? (jsxs("div", { style: { width: "100%" }, children: [jsx(TermsText, { children: "Termos e Condic\u0327o\u0303es" }), jsx(DiscountRules, { children: discountRules })] })) : (jsx("div", {})), buttonText && buttonType === "internal" ? (jsxs(ButtonLink, { children: [buttonText, " ", jsx(ArrowRight, {})] })) : buttonText && buttonType === "external" ? (jsxs(ButtonLink, { children: [buttonText, " ", jsx(Share, {})] })) : (jsx("div", {}))] })] }) }));
+const InternalNotificationScreen = ({ buttonText, code, discountRules, banner, notificationDescription, pageTitle, bannerType, primaryColor, buttonType, }) => {
+    return (jsx(Container$1, { children: jsxs(ContainerInternal$1, { primaryColor: primaryColor, children: [jsxs(TopBar$1, { primaryColor: primaryColor, children: [jsx(ArrowLeft$1, {}), jsx(BarText$1, { children: " Notificac\u0327a\u0303o" }), jsx("div", {})] }), jsxs(ContentContainer$1, { children: [banner ? (jsx(Logo, { src: banner, alt: "logo", bannerType: bannerType })) : (jsx("div", {})), jsx(PageTitle, { children: pageTitle }), jsx(NotificationDescription, { children: notificationDescription }), code ? (jsx(ColumContainer, { children: jsxs(CodeContainer, { children: [jsx("div", {}), jsx(CodeText, { children: code }), jsx(Copy, {})] }) })) : (jsx("div", {})), discountRules ? (jsxs("div", { style: { width: "100%" }, children: [jsx(TermsText, { children: "Termos e Condic\u0327o\u0303es" }), jsx(DiscountRules, { children: discountRules })] })) : (jsx("div", {})), buttonText && buttonType === "internal" ? (jsxs(ButtonLink, { primaryColor: primaryColor, children: [buttonText, " ", jsx(ArrowRight, {})] })) : buttonText && buttonType === "external" ? (jsxs(ButtonLink, { primaryColor: primaryColor, children: [buttonText, " ", jsx(Share, {})] })) : (jsx("div", {}))] })] }) }));
 };
 
 const Container = styled.div `
@@ -280,7 +274,7 @@ const Container = styled.div `
   background-size: contain;
 `;
 const ContainerInternal = styled.div `
-  background-color: #8f0cf2;
+  background-color: ${({ primaryColor }) => primaryColor || "#8f0cf2"};
   width: 220px;
   height: 480px;
   flex-direction: column;
@@ -296,7 +290,7 @@ const TopBar = styled.div `
   height: 50px;
   margin-top: 10px;
   justify-content: space-between;
-  background-color: #8f0cf2;
+  background-color: ${({ primaryColor }) => primaryColor || "#8f0cf2"};
   color: #fff;
   font-size: 18px;
   font-weight: bold;
@@ -372,8 +366,8 @@ const LogoCard = styled.img `
   border-radius: 50%;
 `;
 
-const ListNotificationScreen = ({ logo, description, title, }) => {
-    return (jsx(Container, { children: jsxs(ContainerInternal, { children: [jsxs(TopBar, { children: [jsx(ArrowLeft, {}), jsx(BarText, { children: " Notificac\u0327a\u0303o" }), jsx("div", {})] }), jsx(ContentContainer, { children: jsx(Card, { children: jsxs(ContentCard, { children: [jsx(LogoCard, { src: logo }), jsxs(ContentCardText, { children: [jsx(TextCard, { children: (title === null || title === void 0 ? void 0 : title.length) > 20 ? `${title === null || title === void 0 ? void 0 : title.slice(0, 20)}...` : title }), jsx(TextCard, { children: (description === null || description === void 0 ? void 0 : description.length) > 20
+const ListNotificationScreen = ({ logo, description, title, primaryColor, }) => {
+    return (jsx(Container, { children: jsxs(ContainerInternal, { primaryColor: primaryColor, children: [jsxs(TopBar, { primaryColor: primaryColor, children: [jsx(ArrowLeft, {}), jsx(BarText, { children: " Notificac\u0327a\u0303o" }), jsx("div", {})] }), jsx(ContentContainer, { children: jsx(Card, { children: jsxs(ContentCard, { children: [jsx(LogoCard, { src: logo }), jsxs(ContentCardText, { children: [jsx(TextCard, { children: (title === null || title === void 0 ? void 0 : title.length) > 20 ? `${title === null || title === void 0 ? void 0 : title.slice(0, 20)}...` : title }), jsx(TextCard, { children: (description === null || description === void 0 ? void 0 : description.length) > 20
                                                 ? `${description === null || description === void 0 ? void 0 : description.slice(0, 18)}...`
                                                 : description })] })] }) }) })] }) }));
 };

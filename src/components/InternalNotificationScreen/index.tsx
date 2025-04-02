@@ -25,6 +25,7 @@ interface InternalNotificationScreenProps {
   pageTitle?: string;
   notificationDescription?: string;
   code?: string;
+  primaryColor?: string;
   discountRules?: string;
   buttonText?: string;
   buttonType?: "internal" | "external";
@@ -38,12 +39,13 @@ const InternalNotificationScreen: React.FC<InternalNotificationScreenProps> = ({
   notificationDescription,
   pageTitle,
   bannerType,
+  primaryColor,
   buttonType,
 }) => {
   return (
     <Container>
-      <ContainerInternal>
-        <TopBar>
+      <ContainerInternal primaryColor={primaryColor}>
+        <TopBar primaryColor={primaryColor}>
           <ArrowLeft />
           <BarText> Notificação</BarText>
           <div />
@@ -80,11 +82,11 @@ const InternalNotificationScreen: React.FC<InternalNotificationScreenProps> = ({
             <div />
           )}
           {buttonText && buttonType === "internal" ? (
-            <ButtonLink>
+            <ButtonLink primaryColor={primaryColor}>
               {buttonText} <ArrowRight />
             </ButtonLink>
           ) : buttonText && buttonType === "external" ? (
-            <ButtonLink>
+            <ButtonLink primaryColor={primaryColor}>
               {buttonText} <Share />
             </ButtonLink>
           ) : (

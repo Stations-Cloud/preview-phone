@@ -14,8 +14,8 @@ export const Container = styled.div`
   background-size: contain;
 `;
 
-export const ContainerInternal = styled.div`
-  background-color: #8f0cf2;
+export const ContainerInternal = styled.div<{ primaryColor?: string }>`
+  background-color: ${({ primaryColor }) => primaryColor || "#8f0cf2"};
   width: 220px;
   height: 480px;
   flex-direction: column;
@@ -25,13 +25,13 @@ export const ContainerInternal = styled.div`
   border-top-left-radius: 14px;
   border-top-right-radius: 14px;
 `;
-export const TopBar = styled.div`
+export const TopBar = styled.div<{ primaryColor?: string }>`
   display: flex;
   width: 100%;
   height: 50px;
   margin-top: 10px;
   justify-content: space-between;
-  background-color: #8f0cf2;
+  background-color: ${({ primaryColor }) => primaryColor || "#8f0cf2"};
   color: #fff;
   font-size: 18px;
   font-weight: bold;

@@ -4,6 +4,7 @@ interface InternalNotificationScreenProps {
     pageTitle?: string;
     notificationDescription?: string;
     code?: string;
+    primaryColor?: string;
     discountRules?: string;
     buttonText?: string;
     buttonType?: "internal" | "external";
