@@ -69,8 +69,8 @@ const DescriptionNotification = styled.p `
 `;
 
 const ExternalNotificationScreen = ({ title, description, }) => {
-    return (jsx(Container$2, { children: jsxs(MainContainer, { children: [jsx(TitleContainer, { children: jsx(TitleNotification, { children: title.length > 37 ? `${title.slice(0, 34)}...` : title }) }), jsx(DescriptionContainer, { children: jsx(DescriptionNotification, { children: description.length > 37
-                            ? `${description.slice(0, 37)}...`
+    return (jsx(Container$2, { children: jsxs(MainContainer, { children: [jsx(TitleContainer, { children: jsx(TitleNotification, { children: (title === null || title === void 0 ? void 0 : title.length) > 37 ? `${title === null || title === void 0 ? void 0 : title.slice(0, 34)}...` : title }) }), jsx(DescriptionContainer, { children: jsx(DescriptionNotification, { children: (description === null || description === void 0 ? void 0 : description.length) > 37
+                            ? `${description === null || description === void 0 ? void 0 : description.slice(0, 37)}...`
                             : description }) })] }) }));
 };
 
@@ -373,8 +373,8 @@ const LogoCard = styled.img `
 `;
 
 const ListNotificationScreen = ({ logo, description, title, }) => {
-    return (jsx(Container, { children: jsxs(ContainerInternal, { children: [jsxs(TopBar, { children: [jsx(ArrowLeft, {}), jsx(BarText, { children: " Notificac\u0327a\u0303o" }), jsx("div", {})] }), jsx(ContentContainer, { children: jsx(Card, { children: jsxs(ContentCard, { children: [jsx(LogoCard, { src: logo }), jsxs(ContentCardText, { children: [jsx(TextCard, { children: title.length > 20 ? `${title.slice(0, 20)}...` : title }), jsx(TextCard, { children: description.length > 20
-                                                ? `${description.slice(0, 18)}...`
+    return (jsx(Container, { children: jsxs(ContainerInternal, { children: [jsxs(TopBar, { children: [jsx(ArrowLeft, {}), jsx(BarText, { children: " Notificac\u0327a\u0303o" }), jsx("div", {})] }), jsx(ContentContainer, { children: jsx(Card, { children: jsxs(ContentCard, { children: [jsx(LogoCard, { src: logo }), jsxs(ContentCardText, { children: [jsx(TextCard, { children: (title === null || title === void 0 ? void 0 : title.length) > 20 ? `${title === null || title === void 0 ? void 0 : title.slice(0, 20)}...` : title }), jsx(TextCard, { children: (description === null || description === void 0 ? void 0 : description.length) > 20
+                                                ? `${description === null || description === void 0 ? void 0 : description.slice(0, 18)}...`
                                                 : description })] })] }) }) })] }) }));
 };
 
