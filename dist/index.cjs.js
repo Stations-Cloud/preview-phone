@@ -71,7 +71,9 @@ const DescriptionNotification = styled.p `
 `;
 
 const ExternalNotificationScreen = ({ title, description, }) => {
-    return (jsxRuntime.jsx(Container$2, { children: jsxRuntime.jsxs(MainContainer, { children: [jsxRuntime.jsx(TitleContainer, { children: jsxRuntime.jsx(TitleNotification, { children: title }) }), jsxRuntime.jsx(DescriptionContainer, { children: jsxRuntime.jsx(DescriptionNotification, { children: description }) })] }) }));
+    return (jsxRuntime.jsx(Container$2, { children: jsxRuntime.jsxs(MainContainer, { children: [jsxRuntime.jsx(TitleContainer, { children: jsxRuntime.jsx(TitleNotification, { children: title.length > 37 ? `${title.slice(0, 34)}...` : title }) }), jsxRuntime.jsx(DescriptionContainer, { children: jsxRuntime.jsx(DescriptionNotification, { children: description.length > 37
+                            ? `${description.slice(0, 37)}...`
+                            : description }) })] }) }));
 };
 
 const ArrowRight = (props) => (jsxRuntime.jsx("svg", Object.assign({}, props, { xmlns: "http://www.w3.org/2000/svg", width: 15, height: 12, fill: "none", children: jsxRuntime.jsx("path", { stroke: "white", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: 2, d: "M1 6h13m0 0-5-5m5 5-5 5" }) })));
@@ -143,7 +145,7 @@ const TermsText = styled.h1 `
 const ContentContainer$1 = styled.div `
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   width: 100%;
   margin-top: 2px;
@@ -155,6 +157,9 @@ const ContentContainer$1 = styled.div `
   border-bottom-right-radius: 3px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
   overflow-y: auto;
+  overflow-x: hidden;
+
+  padding-top: 50px; /* Espaço reservado para a Logo */
 `;
 const Logo = styled.img `
   align-self: center;
@@ -171,6 +176,10 @@ const Logo = styled.img `
     : bannerType === "horizontal"
         ? "100px"
         : "100px"};
+
+  margin-top: -40px;
+  position: relative;
+  z-index: 10;
 `;
 const PageTitle = styled.h1 `
   font-size: 14px;
@@ -227,12 +236,16 @@ const ButtonLink = styled.button `
   background-color: #8f0cf2;
   color: #fff;
   margin-top: 10px;
-  font-size: 13px;
+  font-size: 12px;
   font-family: "Nexa Regular";
   border: none;
   border-radius: 30px;
   height: 30px;
   width: 170px;
+  margin-bottom: 20px;
+  min-width: 170px;
+  min-height: 30px;
+  flex-shrink: 0;
 `;
 styled.div `
   height: 1px;
@@ -362,7 +375,9 @@ const LogoCard = styled.img `
 `;
 
 const ListNotificationScreen = ({ logo, description, title, }) => {
-    return (jsxRuntime.jsx(Container, { children: jsxRuntime.jsxs(ContainerInternal, { children: [jsxRuntime.jsxs(TopBar, { children: [jsxRuntime.jsx(ArrowLeft, {}), jsxRuntime.jsx(BarText, { children: " Notificac\u0327a\u0303o" }), jsxRuntime.jsx("div", {})] }), jsxRuntime.jsx(ContentContainer, { children: jsxRuntime.jsx(Card, { children: jsxRuntime.jsxs(ContentCard, { children: [jsxRuntime.jsx(LogoCard, { src: logo }), jsxRuntime.jsxs(ContentCardText, { children: [jsxRuntime.jsx(TextCard, { children: title }), jsxRuntime.jsx(TextCard, { children: description })] })] }) }) })] }) }));
+    return (jsxRuntime.jsx(Container, { children: jsxRuntime.jsxs(ContainerInternal, { children: [jsxRuntime.jsxs(TopBar, { children: [jsxRuntime.jsx(ArrowLeft, {}), jsxRuntime.jsx(BarText, { children: " Notificac\u0327a\u0303o" }), jsxRuntime.jsx("div", {})] }), jsxRuntime.jsx(ContentContainer, { children: jsxRuntime.jsx(Card, { children: jsxRuntime.jsxs(ContentCard, { children: [jsxRuntime.jsx(LogoCard, { src: logo }), jsxRuntime.jsxs(ContentCardText, { children: [jsxRuntime.jsx(TextCard, { children: title.length > 20 ? `${title.slice(0, 20)}...` : title }), jsxRuntime.jsx(TextCard, { children: description.length > 20
+                                                ? `${description.slice(0, 18)}...`
+                                                : description })] })] }) }) })] }) }));
 };
 
 exports.ExternalNotificationScreen = ExternalNotificationScreen;

@@ -36,8 +36,14 @@ const ListNotificationScreen: React.FC<ListNotificationScreen> = ({
             <ContentCard>
               <LogoCard src={logo} />
               <ContentCardText>
-                <TextCard>{title}</TextCard>
-                <TextCard>{description}</TextCard>
+                <TextCard>
+                  {title.length > 20 ? `${title.slice(0, 20)}...` : title}
+                </TextCard>
+                <TextCard>
+                  {description.length > 20
+                    ? `${description.slice(0, 18)}...`
+                    : description}
+                </TextCard>
               </ContentCardText>
             </ContentCard>
           </Card>

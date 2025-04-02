@@ -65,7 +65,7 @@ export const TermsText = styled.h1`
 export const ContentContainer = styled.div`
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   width: 100%;
   margin-top: 2px;
@@ -77,6 +77,9 @@ export const ContentContainer = styled.div`
   border-bottom-right-radius: 3px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
   overflow-y: auto;
+  overflow-x: hidden;
+
+  padding-top: 50px; /* Espaço reservado para a Logo */
 `;
 
 export const Logo = styled.img<{
@@ -98,7 +101,12 @@ export const Logo = styled.img<{
       : bannerType === "horizontal"
       ? "100px"
       : "100px"};
+
+  margin-top: -40px;
+  position: relative;
+  z-index: 10;
 `;
+
 export const PageTitle = styled.h1`
   font-size: 14px;
   font-family: "Nexa Regular";
@@ -159,12 +167,16 @@ export const ButtonLink = styled.button`
   background-color: #8f0cf2;
   color: #fff;
   margin-top: 10px;
-  font-size: 13px;
+  font-size: 12px;
   font-family: "Nexa Regular";
   border: none;
   border-radius: 30px;
   height: 30px;
   width: 170px;
+  margin-bottom: 20px;
+  min-width: 170px;
+  min-height: 30px;
+  flex-shrink: 0;
 `;
 
 export const LineFinal = styled.div`

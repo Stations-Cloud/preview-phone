@@ -21,10 +21,16 @@ const ExternalNotificationScreen: React.FC<ExternalNotificationScreenProps> = ({
     <Container>
       <MainContainer>
         <TitleContainer>
-          <TitleNotification>{title}</TitleNotification>
+          <TitleNotification>
+            {title.length > 37 ? `${title.slice(0, 34)}...` : title}
+          </TitleNotification>
         </TitleContainer>
         <DescriptionContainer>
-          <DescriptionNotification>{description}</DescriptionNotification>
+          <DescriptionNotification>
+            {description.length > 37
+              ? `${description.slice(0, 37)}...`
+              : description}
+          </DescriptionNotification>
         </DescriptionContainer>
       </MainContainer>
     </Container>

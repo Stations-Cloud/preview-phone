@@ -27,7 +27,7 @@ interface InternalNotificationScreenProps {
   code?: string;
   discountRules?: string;
   buttonText?: string;
-  buttonType: "internal" | "external";
+  buttonType?: "internal" | "external";
 }
 
 const InternalNotificationScreen: React.FC<InternalNotificationScreenProps> = ({
