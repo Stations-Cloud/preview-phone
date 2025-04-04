@@ -31,7 +31,7 @@ function styleInject(css, ref) {
 var css_248z = "@font-face {\r\n    font-family: \"Nexa Black\";\r\n    src: url(\"https://node.clubecerto.com.br/superapp/images/assets/fonts/nexaBlack.otf\")\r\n  }\r\n  @font-face {\r\n    font-family: \"Nexa Bold\";\r\n    src: url(\"https://node.clubecerto.com.br/superapp/images/assets/fonts/NexaBold.otf\");\r\n  }\r\n  @font-face {\r\n    font-family: \"Nexa Book\";\r\n    src: url(\"https://node.clubecerto.com.br/superapp/images/assets/fonts/NexaBook.otf\");\r\n  }\r\n  @font-face {\r\n    font-family: \"Nexa ExtraBold\";\r\n    src: url(\"https://node.clubecerto.com.br/superapp/images/assets/fonts/nexabold.otf\");\r\n  }\r\n  @font-face {\r\n    font-family: \"Nexa ExtraLight\";\r\n    src: url(\"https://node.clubecerto.com.br/superapp/images/assets/fonts/nexalight.otf\");\r\n  }\r\n  \r\n  @font-face {\r\n    font-family: \"Nexa Regular\";\r\n    src: url(\"https://node.clubecerto.com.br/superapp/images/assets/fonts/NexaRegular.otf\");\r\n  }\r\n  .font-regular {\r\n    font-family: \"Nexa Regular\";\r\n  }\r\n  \r\n  @font-face {\r\n    font-family: \"Nexa Light\";\r\n    src: url(\"https://node.clubecerto.com.br/superapp/images/assets/fonts/NexaLight.otf\");\r\n  }\r\n  \r\n  @font-face {\r\n    font-family: \"Nexa Heavy\";\r\n    src: url(\"https://node.clubecerto.com.br/superapp/images/assets/fonts/NexaHeavy.otf\");\r\n  }\r\n  ";
 styleInject(css_248z);
 
-const Container$2 = styled.div `
+const Container$1 = styled.div `
   position: relative;
   display: flex;
   flex-direction: column;
@@ -69,7 +69,7 @@ const DescriptionNotification = styled.p `
 `;
 
 const ExternalNotificationScreen = ({ title, description, }) => {
-    return (jsx(Container$2, { children: jsxs(MainContainer, { children: [jsx(TitleContainer, { children: jsx(TitleNotification, { children: (title === null || title === void 0 ? void 0 : title.length) > 37 ? `${title === null || title === void 0 ? void 0 : title.slice(0, 34)}...` : title }) }), jsx(DescriptionContainer, { children: jsx(DescriptionNotification, { children: (description === null || description === void 0 ? void 0 : description.length) > 37
+    return (jsx(Container$1, { children: jsxs(MainContainer, { children: [jsx(TitleContainer, { children: jsx(TitleNotification, { children: (title === null || title === void 0 ? void 0 : title.length) > 37 ? `${title === null || title === void 0 ? void 0 : title.slice(0, 34)}...` : title }) }), jsx(DescriptionContainer, { children: jsx(DescriptionNotification, { children: (description === null || description === void 0 ? void 0 : description.length) > 37
                             ? `${description === null || description === void 0 ? void 0 : description.slice(0, 37)}...`
                             : description }) })] }) }));
 };
@@ -82,7 +82,7 @@ const Share = (props) => (jsx("svg", Object.assign({}, props, { xmlns: "http://w
 
 const Arrow = (props) => (jsx("svg", Object.assign({}, props, { xmlns: "http://www.w3.org/2000/svg", width: 8, height: 14, fill: "none", children: jsx("path", { stroke: "white", strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: 2, d: "M7 13 1 7l6-6" }) })));
 
-const Container$1 = styled.div `
+const ContainerInternalNotification = styled.div `
   position: relative;
   flex-direction: column;
   width: 250px;
@@ -258,7 +258,7 @@ const DiscountRules = styled.p `
 `;
 
 const InternalNotificationScreen = ({ buttonText, code, discountRules, banner, notificationDescription, pageTitle, bannerType, primaryColor, buttonType, }) => {
-    return (jsx(Container$1, { children: jsxs(ContainerInternal$1, { primaryColor: primaryColor, children: [jsxs(TopBar$1, { primaryColor: primaryColor, children: [jsx(ArrowLeft$1, {}), jsx(BarText$1, { children: " Notificac\u0327a\u0303o" }), jsx("div", {})] }), jsxs(ContentContainer$1, { children: [banner ? (jsx(Logo, { src: banner, alt: "logo", bannerType: bannerType })) : (jsx("div", {})), jsx(PageTitle, { children: pageTitle }), jsx(NotificationDescription, { children: notificationDescription }), code ? (jsx(ColumContainer, { children: jsxs(CodeContainer, { children: [jsx("div", {}), jsx(CodeText, { children: code }), jsx(Copy, {})] }) })) : (jsx("div", {})), discountRules ? (jsxs("div", { style: { width: "100%" }, children: [jsx(TermsText, { children: "Termos e Condic\u0327o\u0303es" }), jsx(DiscountRules, { children: discountRules })] })) : (jsx("div", {})), buttonText && buttonType === "internal" ? (jsxs(ButtonLink, { primaryColor: primaryColor, children: [buttonText, " ", jsx(ArrowRight, {})] })) : buttonText && buttonType === "external" ? (jsxs(ButtonLink, { primaryColor: primaryColor, children: [buttonText, " ", jsx(Share, {})] })) : (jsx("div", {}))] })] }) }));
+    return (jsx(ContainerInternalNotification, { children: jsxs(ContainerInternal$1, { primaryColor: primaryColor, children: [jsxs(TopBar$1, { primaryColor: primaryColor, children: [jsx(ArrowLeft$1, {}), jsx(BarText$1, { children: " Notificac\u0327a\u0303o" }), jsx("div", {})] }), jsxs(ContentContainer$1, { children: [banner ? (jsx(Logo, { src: banner, alt: "logo", bannerType: bannerType })) : (jsx("div", {})), jsx(PageTitle, { children: pageTitle }), jsx(NotificationDescription, { children: notificationDescription }), code ? (jsx(ColumContainer, { children: jsxs(CodeContainer, { children: [jsx("div", {}), jsx(CodeText, { children: code }), jsx(Copy, {})] }) })) : (jsx("div", {})), discountRules ? (jsxs("div", { style: { width: "100%" }, children: [jsx(TermsText, { children: "Termos e Condic\u0327o\u0303es" }), jsx(DiscountRules, { children: discountRules })] })) : (jsx("div", {})), buttonText && buttonType === "internal" ? (jsxs(ButtonLink, { primaryColor: primaryColor, children: [buttonText, " ", jsx(ArrowRight, {})] })) : buttonText && buttonType === "external" ? (jsxs(ButtonLink, { primaryColor: primaryColor, children: [buttonText, " ", jsx(Share, {})] })) : (jsx("div", {}))] })] }) }));
 };
 
 const Container = styled.div `

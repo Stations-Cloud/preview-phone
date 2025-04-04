@@ -8,8 +8,8 @@ import {
   CodeContainer,
   CodeText,
   ColumContainer,
-  Container,
   ContainerInternal,
+  ContainerInternalNotification,
   ContentContainer,
   DiscountRules,
   Logo,
@@ -43,7 +43,7 @@ const InternalNotificationScreen: React.FC<InternalNotificationScreenProps> = ({
   buttonType,
 }) => {
   return (
-    <Container>
+    <ContainerInternalNotification>
       <ContainerInternal primaryColor={primaryColor}>
         <TopBar primaryColor={primaryColor}>
           <ArrowLeft />
@@ -94,7 +94,7 @@ const InternalNotificationScreen: React.FC<InternalNotificationScreenProps> = ({
           )}
         </ContentContainer>
       </ContainerInternal>
-    </Container>
+    </ContainerInternalNotification>
   );
 };
 

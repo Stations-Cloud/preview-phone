@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import Arrow from "../../icons/Arrow";
 
-export const Container = styled.div`
+export const ContainerInternalNotification = styled.div`
   position: relative;
   flex-direction: column;
   width: 250px;
