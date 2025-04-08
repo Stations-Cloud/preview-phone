@@ -1088,7 +1088,7 @@ prelude-ls@^1.2.1:
   integrity sha512-vkcDPrRZo1QZLbn5RLGPpg/WmIQ65qoWWhcGKf/b5eplkkarX0m9z8ppCat4mlOqUsWpyNuYgO3VRyrYHSzX5g==
 
 "preview-phone@file:..":
-  version "2.0.6"
+  version "2.1.9"
   resolved "file:.."
   dependencies:
     styled-components "^6.1.16"
